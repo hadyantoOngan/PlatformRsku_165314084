@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<head>
+    <!-- BASICS  seting judul -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Rumah Sakit Makin Sakit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link href="css/responsive-slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 4px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<!-- Seting menu dan pengaturan untuk pindah-pindah tempat -->
+<body onload="checkCookieBeforeLoggedIn()">
+
+    <div class="header">
+        <section id="header" class="appear">
+
+            <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="fa fa-bars color-white"></span>
+                    </button>
+                    <h1><a class="navbar-brand" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;">Home
+                        </a></h1>
+                    <!--set Button Menu bar -->      
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+                        <li class="active"><a href="#index"></a></li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Antrian
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="antrian.html">Daftar Antrian</a>
+                                <br></br>
+                                <a href="tambahAntrian.html">Tambah Antrian</a>
+                            </div>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Dokter  
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="Dokter.html">Daftar Dokter</a>
+                                <br></br>
+                                <a href="tambahDokter.html">Tambah Dokter</a>
+                            </div>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Klinik  
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="Klinik.html">Daftar Klinik</a>                            
+                                <br></br>
+                                <a href="tambahKlinik.html">Tambah Klinik</a>
+                            </div>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Pasien  
+                            </a>
+                            <div class="dropdown-menu">
+                                <a href="Pasien.html">Daftar Pasien</a>
+                                <br></br>
+                                <a href="tambahPasien.html"> Tambah Pasien</a>
+                            </div>
+
+                        <li><a onclick="logout()">LogOut</a></li>
+
+                    </ul>
+                </div>
+                <!--/. mengatur navbar-collapse -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Mengatur slide show atau pergantian gambar dan durasi pergantian -->
+    <div class="slider">
+        <div id="about-slider">
+            <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators visible-xs">
+                    <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-slider" data-slide-to="1"></li>
+                    <li data-target="#carousel-slider" data-slide-to="2"></li>
+                </ol>
+                <!-- memasukan gambar pada slide pertama -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/rs1.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption">
+                            <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
+                                <h2><span>Selamat datang di Rumah sakit Makin Sakit</span></h2>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+                                    <p>Melayani dengan senyuman, Membantu Sepenuh Hati</p>
+                                </div>
+                            </div>
+                            <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.9s">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- mengatur gambar ke2 dalam slide 1 -->
+
+                    <div class="item">
+                        <img src="img/rs2.jpg" class="img-responsive" alt="">
+                        <div class="carousel-caption">
+                            <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.0s">
+                                <h2>Kami Siap Membantu anda</h2>
+                            </div>
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.6s">
+                                    <p>Membuat anda jauh lebih dekat dengan tenaga medis kami</p>
+                                </div>
+                            </div>
+                            <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="1.6s">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                    </div>
+                                    <div class="form-group">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+
+                <a class=" right carousel-control hidden-xs" href="#carousel-slider" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+            <!--/#carousel-slider-->
+        </div>
+        <!--/#about-slider-->
+    </div>
+    <!--/#slider-->
+
+    <div>
+    </div>
+    <br>
+    <br>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="container">
+
+
+                <div class="container form" >
+                    <center><h2>Form Tambah Dokter</h2></center>
+
+                    <br/>
+
+                    <form  onsubmit="return make_json(this)" method="POST">
+                        <div class="form-group"> 
+                            <label>nama</label>
+                            <input type="text" class="form-control" id="nama" placeholder="Masukan nama">
+                        </div>
+                        <div class="form-group"> 
+                            <label>spesialis</label>
+                            <input type="text" class="form-control" id="spesialis" placeholder="Masukan spesialis">
+                        </div>
+
+                        <center><input type="submit" value="simpan"></center>
+                    </form>
+
+                </div>
+                <pre id="output">
+
+                </pre>
+<script src="js/Script.js"></script>
+                <script>
+                    function make_json(form) {
+                        var json = {
+
+                            "nama": form.nama.value,
+                            "spesialis": form.spesialis.value
+                        };
+
+                        var html = JSON.stringify(json, 0, 100);
+                        var url = "http://202.94.83.190:8080/165314084RSKu/webresources/dokter/addDokter";
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, false);
+                        xhr.setRequestHeader("Content-type", "application/json");
+                        xhr.send(html);
+                        document.getElementById("output").innerHTML = "Pendaftaran Berhasil";
+                        return false;
+
+                    }
+                    ;
+                </script>
+                </article>
+            </div>
+            <!-- /.card -->
+            <!-- /.card -->
+        </div>
+        <!-- /.col-lg-9 -->
+    </div>
+</div>
+<!-- /.container -->
+</section>
+<section id="footer" class="section footer">
+    <div class="container">
+        <div class="row animated opacity mar-bot0" data-andown="fadeIn" data-animation="animation">
+            <div class="col-sm-12 align-center">
+                <ul class="social-network social-circle">
+                    <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row align-center copyright">
+            <div class="col-sm-12">
+                <p>&copy; Ady Theme</p>
+                <div class="credits">
+
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Bootstrap core JavaScript -->
+<a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js"></script>
+<script src="js/skrollr.min.js"></script>
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/jquery.localScroll.js"></script>
+<script src="js/stellar.js"></script>
+<script src="js/responsive-slider.js"></script>
+<script src="js/jquery.appear.js"></script>
+<script src="js/grid.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+                            wow = new WOW({}).init();
+</script>
+<script src="contactform/contactform.js"></script>
+</body>
+</html>
